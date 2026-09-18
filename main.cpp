@@ -1,7 +1,10 @@
 #include <iostream>
+#include <string>
 #include "raylib.h"
 #define RAYGUI_IMPLEMENTATION
 #include "raygui.h"
+
+#include "atom.h"
 
 typedef struct {
     const char *shortcut;
@@ -98,6 +101,9 @@ int main() {
         int textWidth = MeasureText(displayText, 20);
         
         DrawText(displayText, currentWidth - textWidth - 20, currentHeight - 40, 20, BLUE);
+
+        Atom atom("hallo", 1);
+        atom.Info();
 
         EndDrawing();
     }
