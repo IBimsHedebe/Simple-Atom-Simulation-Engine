@@ -61,6 +61,7 @@ int main() {
     int dropdownActive = 0;
 
 
+    Atom atom("one", 0, {250, 250}, 1, 0);
 
     while (!WindowShouldClose()) {
         if (IsKeyPressed(KEY_F11)) ToggleFullscreen();
@@ -102,8 +103,7 @@ int main() {
         
         DrawText(displayText, currentWidth - textWidth - 20, currentHeight - 40, 20, BLUE);
 
-        Atom atom("hallo", 1);
-        atom.Info();
+        atom.Draw();
 
         EndDrawing();
     }
